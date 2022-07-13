@@ -24,3 +24,4 @@ This is the repository holding the code for my Fetch Rewards coding assessment.
     - need to find a good example workflow letting you test docker compose
     - just use dummy data for the tests
   - write the app stuff
+  - follow: https://testdriven.io/courses/tdd-flask/intro/
