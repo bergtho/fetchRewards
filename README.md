@@ -11,7 +11,7 @@ This is the repository holding the code for my Fetch Rewards coding assessment.
   - Run "bash run.sh"
     - This will check that no containers with the same name exist, and then create the docker image, and then run the docker container.
   - Once the container is running
-    - Do a post with the inputs via TODO
+    - Do a post with the inputs via TODO (localhost:5000 or 0.0.0.0:5000)
     - Run the tests via TODO
 
 # Notes on my project
