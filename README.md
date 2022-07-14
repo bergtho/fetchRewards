@@ -12,7 +12,8 @@ This is the repository holding the code for my Fetch Rewards coding assessment.
     - This will check that no containers with the same name exist, and then create the docker image, and then run the docker container.
   - Once the container is running
     - Do a post with the inputs via TODO (localhost:5000 or 0.0.0.0:5000)
-    - Run the tests via TODO
+      - curl -X POST -H "Content-type: text/plain" -d "(10,12),[(1.5,1.5),(4.0,1.5),(1.5,8.0),(4.0,8.0)]" "0.0.0.0:5000/pix-cords"
+    - Run the tests via TODO - change python, app.run to pytest
 
 # Notes on my project
 TODO
