@@ -2,21 +2,19 @@
 This is the repository holding the code for my Fetch Rewards coding assessment.
 
 # Running the code
-
-  - First, make sure you have docker installed by following the steps corresponding to your operating system.
-    - Windows: https://docs.docker.com/desktop/windows/install/
-    - Mac: https://docs.docker.com/desktop/mac/install/
-    - Ubuntu: https://docs.docker.com/engine/install/ubuntu/
-  - Clone this repository and navigate into the project's base directory
-  - Run "bash run.sh"
-    - This will check that no containers with the same name exist, and then create the docker image, and then run the docker container.
+  - Clone the repository
+  - From within the repository, execute the "run.sh" script
+    - This will check that no containers with the same name exist, then create the docker image and run the docker container.
+    - The container is run in detached mode, so you can execute the curls from within the same terminal.
   - Once the container is running
-    - Do a post with the inputs via TODO (localhost:5000 or 0.0.0.0:5000)
-      - curl -X POST -H "Content-type: text/plain" -d "(10,12),[(1.5,1.5),(4.0,1.5),(1.5,8.0),(4.0,8.0)]" "0.0.0.0:5000/pix-cords"
-    - Run the tests via TODO - change python, app.run to pytest
+    - Do a post from your terminal or postman on http://0.0.0.0:5000/pix-coords
+      - The content type should be plain text and that the body of the payload should be a string holding a tuple of the image dimensions followed by a comma and the list of two-element tuples defining corner points.
+      - example: curl -X POST -H "Content-type: text/plain" -d "(10,12),[(1.5,1.5),(4.0,1.5),(1.5,8.0),(4.0,8.0)]" 0.0.0.0:5000/pix-cords
+
+# Tests
+  - To run the tests, just run "pytest"
+  - The tests are in test_flask.py if you want to see them
 
 # Notes on my project
-TODO
-
-# Ways to improve the code / project
-TODO
+  - The code is definitely not production ready. In particular, I use 'eval' to load the corner points and image dimensions without doing any checks on the data string. 
+  - Unless there's a pre-built script to run tests with json as the content type, I thought that using plain text would be the easiest content type for the code to be tested with.
